@@ -1,5 +1,10 @@
 name: My First Workflow
+
 on: [push]
+
+env:
+  NODE_VERSION: '18'
+
 jobs:
   first_job:
     runs-on: ubuntu-latest
@@ -10,7 +15,7 @@ jobs:
       - name: setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: execute script
         run: node ./prac.js
