@@ -1,0 +1,20 @@
+name: multi sync jobs
+on: [push]
+jobs: 
+  install_deps: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: execute script
+        run: node ./prac.js
+  
+  build_script: 
+    needs: install_deps
+    runs-on: ubuntu-latest
+    steps: 
+      - name: run build
+        run: node ./prac.js
