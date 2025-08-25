@@ -10,7 +10,7 @@ jobs:
       - name: setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '$NODE_VERSION'
 
       - name: execute script
         run: node ./prac.js
