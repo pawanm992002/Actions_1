@@ -12,8 +12,5 @@ jobs:
         with:
           node-version: '20'
 
-      - name: install dependencies
-        run: npm install
-
       - name: execute script
         run: node ./prac.js
