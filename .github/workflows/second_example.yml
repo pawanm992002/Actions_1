@@ -6,7 +6,7 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@v4
-        
+
       - name: setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -19,5 +19,8 @@ jobs:
     needs: install_deps
     runs-on: ubuntu-latest
     steps: 
+      - name: checkout
+        uses: actions/checkout@v4
+
       - name: run build
         run: node ./prac.js
