@@ -7,11 +7,9 @@ jobs:
         - name: checkout
           uses: actions/checkout@v4
 
-        - name: welcome message
-          run: echo "Hello world"
+        - name: install node
+          run: apt install node
 
-        - name: list files
-          run: ls
+        - name: execute script
+          run: node ./prac.js
 
-        - name: read all files
-          run: cat README.md
